@@ -1,9 +1,21 @@
-import example.pepita
+import juego.*
 
-describe "group of tests for pepita" {
+describe "test juego" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+
+
+
+  test "Agregamos un orco con rol mago a un ejercito  " 
+  {
+    const  ejercitoUno =new Ejercito()
+    ejercitoUno.agregarIntegrante(new Orco(fuerza=10,inteligencia=10,rol=new Brujo()))
+    assert.equals(1, ejercitoUno.cantidad())
+  }
+  test "Agregamos un humano con rol mago a un ejercito  " 
+  {
+    const  ejercitoUno =new Ejercito()
+    ejercitoUno.agregarIntegrante(new Orco(fuerza=10,inteligencia=10,rol=new Brujo()))
+    assert.equals(1, ejercitoUno.cantidad())
   }
 
 }
